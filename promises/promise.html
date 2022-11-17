@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="image" src="https://media2.giphy.com/media/3ohzdOrcdpiD26TPt6/giphy.gif?cid=ecf05e47dht8wqo7vmgdhd4ekp2eqd18q5zvoug0y2zvbyl6&rid=giphy.gif&ct=g"
+        alt="google giphy">
+</body>
+
+</html>
+
+<script>
+    let image=document.getElementById("image")
+
+    function checkTransaction() {
+        //...
+        return true;
+    }
+
+    const myPromise = new Promise(function (resolve, reject) {
+        let transaction_status = false;
+
+        setTimeout(function () {
+            transaction_status = checkTransaction();
+
+            if (transaction_status === true) {
+                resolve("Payment sucessfull");
+            } else {
+                reject("Payment failed");
+            }
+        }, 3000);
+    });
+
+    myPromise
+        .then(function (rest) {
+            console.log("rest:", rest);
+            image.src ="https://media1.giphy.com/media/JGGlj89yd5LsEfGdxB/giphy.gif?cid=ecf05e47n8cosx99artj0dz2fk3dofo315h4matgjgjaas2n&rid=giphy.gif&ct=g";
+        })
+        .catch(function (err) {
+            console.log("this is my err:", err);
+        });
+
+
+
+</script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="timer"></h1>
+    <button onclick="stop()">stop</button>
+</body>
+</html>
+
+<script>
+
+// Timing Events
+
+// The window object allows execution of code at specified time intervals.
+// These time intervals are called timing events.
+// The two key methods to use with JavaScript are:
+// 1.setTimeout(function, milliseconds)
+// Executes a function, after waiting a specified number of milliseconds.
+// 2.setInterval(function, milliseconds)
+// Same as setTimeout(), but repeats the execution of the function continuously.
+
+
+//setInterval();The setInterval() method repeats a block of code at every given timing event.
+// setInterval(function, milliseconds);
+// Its parameters are:
+
+// function - a function containing a block of code
+// milliseconds - the time interval between the execution of the function
+
+
+
+let h1=document.getElementById('timer');
+
+// for(let i=0; i<100; i++){ //if var will be global use let it will work for block scope
+//   h1.innerText=i
+// } wont work it executes fast
+let i=0;
+let id=setInterval(function (){
+    // if(i==50){
+    //     i=0;
+    // }
+    
+    h1.innerText=i;
+    i++;
+},100);
+    //function call inbuilt
+
+    //clearINterval : will stop the interval
+function stop(){
+    clearInterval(id)
+    
+}
+
+
+
+
+</script>
