@@ -21,7 +21,7 @@ fetch(url)
         return res.json();
     })
     .then(function (res) {
-        appendData(res)
+        appendData(res) // will get data in this .then so we used append here
     })
     .catch(function (err) {
         console.log("err:", err)

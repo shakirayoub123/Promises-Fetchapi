@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         
+         body {
+              background-color: rgb(48, 47, 47);
+        }
+
+        #nav{
+             height:40px;
+             width:80%;
+             margin:auto;
+             display:flex;
+             justify-content:center;
+             align-items:center;
+        }
+        #nav2{
+    margin:auto;
+    width:500px;
+            height:30px;
+            border:none;
+            border-radius:3px;
+            /* box-shadow: 0 20px 50px rgba(8, 112, 184, 0.7); */
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+#nav2>div{
+    margin-right:30px;
+    font-family: 'Noto Sans', sans-serif;
+    box-shadow: 0 20px 50px rgba(8, 112, 184, 0.7);
+}
+a{
+    text-decoration:none;
+    font-weight:bolder;
+    color:rgb(40, 104, 214);
+}
+
+        #movies{
+         background-color: rgb(48, 47, 47);
+         color:white;
+         width:420px;
+         height:300px;
+         border-top:none;
+         overflow:hidden;
+         margin-left:140px;
+        border-radius:3px;
+       }
+       #suggest{
+         text-align:left;
+       }
+
+       #slideshow{
+    width:80%;
+    margin:auto;
+    margin-top:10%
+}
+
+#image{
+  width:100%;
+  height:450px;
+  box-shadow: rgba(190, 188, 188, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+       
+       input{
+         color:white;
+       }
+
+        #search{
+            width:500px;
+            height:30px;
+            border:none;
+            border-radius:3px;
+            box-shadow: 0 20px 50px rgba(8, 112, 184, 0.7);
+            border-bottom: 1px solid black;
+            background-color: black;
+        }
+
+        #showMovies{
+  display:grid;
+  grid-template-columns:repeat(3,230px);
+  grid-template-rows:auto;
+  gap:60px;
+  margin:auto;
+  justify-content:center;
+  align-items:center;
+  margin-top:100px;
+}
+
+#box{
+  border-radius:5px;
+  box-shadow: rgba(190, 188, 188, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+#poster{
+  height:250px;
+  width:100%
+}
+#title{
+  text-align:center;
+  color:white;
+}
+#yor{
+  text-align:center;
+  color:white;
+  font-size:16px;
+}
+#imdb{
+  text-align:center;
+  color:white;
+  font-size:16px;
+}
+#error{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+
+
+</style>
+</head>
+<body>
+   <div id="nav">
+      <input oninput="debounce(main,1000)" type="text" id="search" placeholder="search movies" />
+     <!-- <input type="text" id="search" placeholder="movie"/> -->
+      <div id="nav2">
+        <div><a href="index.html">Home</a></div>
+        <div><a href="login.html">Login</a></div>
+        <div><a href="signup.html">Signup</a></div>
+    </div>
+   </div>
+   
+   <div id="movies"></div>
+   <div id="slideshow">
+    <!--Show Slideshow here-->
+
+   </div>
+  
+   <div id="error"></div>
+   <div id="showMovies"></div>
+</body>
+</html>
+<script src="index.js"></script>
