@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Noto+Sans&family=Roboto+Mono:ital,wght@0,300;1,400&family=Roboto:wght@100&display=swap');
+
+body{
+    font-family: 'Noto Sans', sans-serif;
+}
+/* img{
+    height:50px;
+    width:auto;
+} */
+#head{
+    
+    display:flex;
+    align-items: center;
+    gap:10px;
+    margin-left: 35%;
+}
+#img{
+    height:30px;
+}
+#show_Videos{
+
+    display:grid;
+    grid-template-columns: repeat(4,20%);
+    grid-gap:5%;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#query{
+    height: 30px;
+    border-radius: 5px;
+    text-align: start;
+    width:300px;
+    border:1px solid ;
+    margin-left: 35%;
+
+
+}
+/* h1{
+    text-align: center;
+} */
+#btn{
+    height:32px;
+    border-radius: 5px;
+    border: none;
+    color:white;
+    background-color: rgb(21, 149, 240);
+}

@@ -1,0 +1,14 @@
+#container{
+    display:flex;
+    border:1px solid black;
+}
+#input, #output{
+    flex:1;
+    margin:5%;
+    height:300px;
+    border:1px solid black ;
+}
+#input-text{
+    width:95%;
+    height:250px;
+}
